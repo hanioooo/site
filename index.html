@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Website</title>
+    <title>Discord Sleep Counter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,11 +17,12 @@
             background-color: #f4f4f9;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
         button {
             padding: 10px 20px;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin: 10px;
             border: none;
             cursor: pointer;
@@ -35,9 +36,9 @@
     </style>
 </head>
 <body>
-    <h1>Counter: <span id="counter">0</span></h1>
-    <button onclick="increment()">Increment</button>
-    <button onclick="decrement()">Decrement</button>
+    <h1>aantal keren in slaap gevallen op discord: <span id="counter">0</span></h1>
+    <button onclick="increment()">anoother one</button>
+    <button onclick="decrement()">forgiven</button>
     <button onclick="reset()">Reset</button>
 
     <script>
@@ -53,7 +54,9 @@
         }
 
         function decrement() {
-            count--;
+            if (count > 0) {
+                count--;
+            }
             updateCounter();
         }
 
